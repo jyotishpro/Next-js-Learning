@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML Geolocation</h1>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+function getLocation(){
+
+        if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(ShowPosition);
+        // navigator.geolocation.watchPosition(ShowCurrentPos);
+        } 
+}
+
+function ShowPosition(position){   document.getElementById("demo").innerHTML=`latitude is ${position.coords.latitude} <br> longitude is: ${position.coords.longitude}`
+console.log(position.coords.latitude)
+console.log(position.coords.longitude)
+}
+// function ShowCurrentPos(position){   document.getElementById("demo").innerHTML=`latitude is ${position.coords.latitude} <br> longitude is: ${position.coords.longitude}`
+// console.log(position.coords.latitude)
+// console.log(position.coords.longitude)
+// }
+
+function getadd(lat,lang){
+
+        
+}
+
+</script>
+
+</body>
+</html>
+    
